@@ -3,10 +3,12 @@ sudo apt update && sudo apt install nodejs npm
 # Install pm2 which is a production process manager for Node.js with a built-in load balancer.
 sudo npm install -g pm2
 # stop any instance of our application running currently 
-pm2 stop DevOps1
+pm2 stop DevOps2
 # change directory into folder where application is downloaded
-cd DevOps1
+cd DevOps2
 # Install application dependencies
 npm install
+echo $PRIIVATE_KEY > privatekey.pem
+echo $SERVER > server.crt
 # Start the application with the process name DevOps1 using pm2
-pm2 start ./bin/www --name DevOps1
+pm2 start ./bin/www --name DevOps2
