@@ -8,7 +8,7 @@ pm2 stop DevOps2
 cd DevOps2
 # Install application dependencies
 npm install
-echo $PRIIVATE_KEY > privatekey.pem
+echo $PRIVATE_KEY > privatekey.pem
 echo $SERVER > server.crt
 # Start the application with the process name DevOps1 using pm2
 pm2 start ./bin/www --name DevOps2
