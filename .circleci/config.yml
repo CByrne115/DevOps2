@@ -9,13 +9,10 @@ workflows:
             branches:
               only:
                 - main
-      
-          requires:
-            - build
-
+          
 jobs:
   build:
-    working_directory: ~/DevOps1
+    working_directory: ~/DevOps2
     docker:
       - image: circleci/node:10.16.3
     steps:
